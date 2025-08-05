@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/*Section Header*/
+.section-header {
+    margin: 60px;
+}
+
+.section-header h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 20px;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #2c3e50;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.section-header h2::before{
+    content: "O";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 550;
+    font-size: 96px;
+    opacity: .15;
+}
+
+.section-header p {
+    max-width: 750px;
+    margin: 20px auto 0 auto;
+    font-size: 16px;
+    color: #888;
+    line-height: 1.7;
+}
+
+/*Card containter*/
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Card*/
+.team-member{
+    width: 25%;
+    padding: 15px;
+}
+
+.team-member img {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+}
+
+.team-member h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 20px 0 5px 0;
+}
+
+.team-member .role {
+    font-size: 14px;
+    color: #888;
+    font-weight: 400;
+}
+
+
+/*Responsive*/
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .team-member {
+        width:50%;
+    }
+}
+@media screen and (max-width: 576px) {
+    .section-header h2 {
+        font-size: 32px;
+    }
+
+    .team-member {
+        width: 100%;
+    }
+}
